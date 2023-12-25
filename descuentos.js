@@ -66,7 +66,21 @@ function calcularPrecioConDescuento(){
             return itemArray.name == coupon;
 
         }
-   
+
+//Ejemplo de un find simplificado
+/*
+function solution(arrayObjetosPersonas, cedula) {
+  // Tu código aquí 👈
+
+  const usuarioEncontrado = arrayObjetosPersonas.find(user => arrayObjetosPersonas.id == cedula);
+  if (usuarioEncontrado) {
+    return usuarioEncontrado.name;
+  } else {
+    return false
+  }
+}
+
+*/
 
 /*
    function aplicarCupon(precio, codigo){
