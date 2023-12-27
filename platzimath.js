@@ -1,5 +1,5 @@
-
-function calcularPromedio(lista){
+const PlatziMath={};
+PlatziMath.calcularPromedio= function calcularPromedio(lista){
     let sumaLista=0;
     for(let i=0; i<lista.length; i++){
         sumaLista=sumaLista+lista[i];
@@ -7,7 +7,7 @@ function calcularPromedio(lista){
     const promedio=sumaLista/lista.length;
     return promedio;
 }
-function calcularPromedio2(lista){
+PlatziMath.calcularPromedio2= function calcularPromedio2(lista){
     
     function sumarTodosElementos(valorAcumulado, newValor){
         return valorAcumulado + newValor;
@@ -18,23 +18,21 @@ function calcularPromedio2(lista){
     console.log(prom2);
     return prom2;
 }
-function calcularPromedio3(lista){
+PlatziMath.calcularPromedio3=function calcularPromedio3(lista){
     const sumaList2=lista.reduce((acum,valItem)=>acum+valItem);
     const prom3=sumaList2/lista.length;
     console.log(prom3);
     return prom3;
 }
-
-function isPair(lista){
+PlatziMath.isPair=function isPair(lista){
     //10%2= 0 esto equivale a false
     return !(lista.length%2);
 }
-function esImpar(lista){
+PlatziMath.esImpar=function esImpar(lista){
     //10%2= 0 esto equivale a false
     return lista.length%2;
 }
-
-function calcularMediana(listaDesordenada){
+PlatziMath.calcularMediana=function calcularMediana(listaDesordenada){
     //ordenar el array de menor a mayor mediante función sort
     const lista=ordenarLista(listaDesordenada);
     
@@ -50,8 +48,7 @@ function calcularMediana(listaDesordenada){
     }
     return mediana;
 }
-
-function ordenarLista(lista){
+PlatziMath.ordenarLista=function ordenarLista(lista){
     function ordenSort(valorAcumulado, nuevoValor){
         /*
         if(valorAcumulado>nuevoValor){
@@ -74,8 +71,7 @@ function ordenarLista(lista){
     // let ordenada= lista.sort((valAcum,nuevoValor)=>valAcum-nuevoValor);
     return ordenada;
 }
-
-function calcularModa(lista){
+PlatziMath.calcularModa=function calcularModa(lista){
     const listaCount = {};
     
     for (let i=0; i<lista.length; i++){
@@ -94,8 +90,7 @@ function calcularModa(lista){
     console.log("la moda es: "+moda);
     return moda;
 }
-
-function ordenarListaBidemensional(listaBiDesordenada, i){
+PlatziMath.ordenarListaBidemensional=function ordenarListaBidemensional(listaBiDesordenada, i){
     function ordenarListaSort(valorAcumulado, nuevoValor){
         return valorAcumulado[i] - nuevoValor[i];
     }
